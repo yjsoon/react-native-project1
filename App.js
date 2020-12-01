@@ -5,12 +5,19 @@ import { StyleSheet, Text, View } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={[styles.baseStyle, styles.text, { fontStyle: "normal" }]}>
-        Hello world!
-      </Text>
-      <Text style={{ fontStyle: "italic", color: "grey" }}>
-        This is my amazing new feature!!!
-      </Text>
+      <View style={styles.fillerContainer}></View>
+
+      <View style={styles.titleContainer}>
+        <Text style={[styles.baseStyle, styles.text, { fontStyle: "normal" }]}>
+          Hello world!
+        </Text>
+        <Text style={{ fontStyle: "italic", color: "grey" }}>
+          This is my amazing new feature!!!
+        </Text>
+      </View>
+
+      <View style={styles.fillerContainer}></View>
+
       <StatusBar style="auto" />
     </View>
   );
@@ -19,7 +26,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#ff0",
     alignItems: "center",
     justifyContent: "center",
   },
