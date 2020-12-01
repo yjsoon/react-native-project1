@@ -11,14 +11,14 @@ export default function App() {
         <Text style={[styles.baseStyle, styles.text, { fontStyle: "normal" }]}>
           Hello world!
         </Text>
-        <Text style={{ fontStyle: "italic", color: "grey" }}>
+        <Text
+          style={[styles.baseStyle, { fontStyle: "italic", color: "grey" }]}
+        >
           This is my amazing new feature!!!
         </Text>
       </View>
 
       <View style={styles.fillerContainer}></View>
-
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -32,10 +32,24 @@ const styles = StyleSheet.create({
   },
   baseStyle: {
     fontStyle: "italic",
+    textAlign: "center",
   },
   text: {
     color: "red",
     fontSize: 40,
     fontWeight: "bold",
+  },
+  fillerContainer: {
+    backgroundColor: "blue",
+    width: "50%",
+    flex: 1,
+  },
+  titleContainer: {
+    backgroundColor: "orange",
+    width: "90%",
+    flex: 2,
+    justifyContent: "center",
+    margin: 20,
+    borderRadius: 100,
   },
 });
