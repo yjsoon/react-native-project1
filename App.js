@@ -5,8 +5,12 @@ import { StyleSheet, Text, View } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello world!</Text>
-      <Text>This is my amazing new feature!!!</Text>
+      <Text style={[styles.baseStyle, styles.text, { fontStyle: "normal" }]}>
+        Hello world!
+      </Text>
+      <Text style={{ fontStyle: "italic", color: "grey" }}>
+        This is my amazing new feature!!!
+      </Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -18,5 +22,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  baseStyle: {
+    fontStyle: "italic",
+  },
+  text: {
+    color: "red",
+    fontSize: 40,
+    fontWeight: "bold",
   },
 });
